@@ -143,7 +143,7 @@ a img {
 a {
     color: #444;
     /*color: #1112d0;!*文章标题颜色*!*/
-    text-decoration: none;
+    text-decoration:none;/*要146行和157行两个语句一起使用才能出现鼠标停留时有下划线*/
 }
 
 a:visited {
@@ -154,6 +154,7 @@ a:visited {
 a:hover {
     /*color: #009688;*/
     color: #000000;/*主页左上角的名称，鼠标停留时的出现的颜色*/
+    text-decoration:underline /*要146行和157行两个语句一起使用才能出现鼠标停留时有下划线*/
 }
 
 .clear {
