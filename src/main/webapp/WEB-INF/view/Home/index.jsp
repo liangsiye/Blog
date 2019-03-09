@@ -42,11 +42,10 @@
                                  alt="${a.articleTitle}">
                         </a>--%>
 
-                        <%--这个是左上角的文章分类字--%>
-                        <a href="/article/${a.articleId}">
-
-                        </a>
-
+                                    <img width="280" height="210"
+                                         src="/img/thumbnail/random/img_${a.articleId%15}.jpg"
+                                         class="attachment-content size-content wp-post-image"
+                                         <%--alt="${a.articleTitle}">--%>
 
 
 

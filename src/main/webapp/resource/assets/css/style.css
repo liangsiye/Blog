@@ -233,7 +233,8 @@ a, button, input {
 
 /** 头部导航栏布局 **/
 #masthead {
-    height: 120px; /*导航栏和主页文章的上下距离*/
+    /*height: 120px; !*导航栏和主页文章的上下距离*!*/
+    height: 115px; /*导航栏和主页文章的上下距离*/
 }
 
 
@@ -528,7 +529,8 @@ a, button, input {
     z-index: 999;
     right: 0;
     border-bottom: 1px solid #ddd;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);*/
+    box-shadow: 0px 8px 15px #b2b2b2;/*页面导航栏的阴影*/
 }
 
 #menu-box.shadow {
@@ -1417,7 +1419,8 @@ a, button, input {
 .single-tao .tao, .single-video .video {
     position: relative;
     background: #fff;
-    margin: 0 0 10px 0;
+    /*margin: 0 0 10px 0;*/
+    margin: 0 0 1px 0;/*主页文章的上下距离*/
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
@@ -1451,15 +1454,16 @@ a, button, input {
     overflow-x: hidden;
 }
 
-.title-l {
+/*文章的左中间的横条块*/
+/*.title-l {
     position: absolute;
-    /*background: #c40000;*//*文章的左中间的红色横条*/
+    !*background: #c40000;*!!*文章的左中间的红色横条*!
     top: 20px;
     left: -1px;
     width: 5px;
     height: 25px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 .entry-more a {
     position: absolute;
@@ -1568,8 +1572,8 @@ a, button, input {
 /** 缩略图 **/
 
 .thumbnail {
-    float: left;
-    /*position: relative;
+    /*float: left;
+    position: relative;
     max-width: 200px;
     height: 100px;
     clear: both;
@@ -1578,11 +1582,15 @@ a, button, input {
     transition-duration: .5s;*/
 }
 
-.thumbnail a img {
+/*.thumbnail a img {*/
+.thumbnail  img {
     float: left;
-    width: auto;
-    height: auto;
+    width: 58px;
+    height: 58px;
     max-width: 100%;
+    /*margin-left: -16px;*/
+    /*padding: 4px 4px 4px 4px;*/
+    margin: 4px 6px 4px -16px;
 }
 
 /*这是文章左上角的分类的红色方形*/
@@ -7581,7 +7589,8 @@ li.search-inf {
 }
 
 body {
-    background-color: #F5F8F9;
+    /*background-color: #F5F8F9;*/
+    background-color: #E1E1E1;/*博客页面的背景色*/
     display: flex;
     min-height: 100vh; /*1vh表示浏览器高度的1%，100vh为浏览器高度，感觉这个挺好的*/
     flex-direction: column;/*灵活的项垂直显示*/
