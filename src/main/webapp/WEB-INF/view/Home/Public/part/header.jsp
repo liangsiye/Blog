@@ -51,13 +51,15 @@
                 <p class="site-description">${options.optionSiteDescrption}</p>
             </div>--%><!-- .logo-site -->
             <div id="site-nav-wrap">
-                <div id="sidr-close">
+                <%--<div id="sidr-close">
                     <a href="#sidr-close" class="toggle-sidr-close">×</a>
-                </div>
+                </div>--%>
                 <nav id="site-nav" class="main-nav">
+                    <%--搜索的长形框start--%>
                     <a href="#sidr-main" id="navigation-toggle" class="bars">
                         <i class="fa fa-bars"></i>
                     </a>
+                        <%--搜索的长形框end--%>
 
                     <%--主页的导航栏文字start--%>
                     <div class="menu-pcmenu-container">
@@ -65,7 +67,8 @@
                         <ul id="menu-pcmenu" class="down-menu nav-menu sf-js-enabled sf-arrows">
 
                             <li>
-                                <a href="/">
+                                <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                                <a style=" text-decoration: none; " href="/">
                                     <i class="fa-home fa"></i>
                                     <span class="font-text">首页</span>
                                 </a>
@@ -76,7 +79,8 @@
                                 <c:if test="${category.categoryPid==0 && category.categoryId==15}"><%--获取数据库的categoryPid==0的字段后显示到主页导航栏--%>
                                     <li>
                                         <%--<a href="/category/${category.categoryId}">--%>
-                                        <a href="/map">
+                                                <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                                        <a style=" text-decoration: none; " href="/map">
                                             <i class="${category.categoryIcon}"></i>
                                             <span class="font-text">${category.categoryName}&nbsp;</span>
                                         </a>
@@ -101,8 +105,8 @@
                             <c:forEach items="${allCategoryList}" var="category">
                                 <c:if test="${category.categoryPid==0 && category.categoryId==10 }"><%--获取数据库的categoryPid==0的字段后显示到主页导航栏--%>
                                     <li>
-
-                                            <a href="/articleFile">
+                                            <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                                            <a style=" text-decoration: none; " href="/articleFile">
                                                 <i class="${category.categoryIcon}"></i>
                                                 <span class="font-text">${category.categoryName}&nbsp;</span>
                                             </a>
@@ -135,7 +139,7 @@
 </header><!-- #masthead -->
 <%--导航 end start--%>
 
-<%--搜索框 start--%>
+<%--搜索框 start这是点击搜索图标后弹出的搜索框--%>
 <div id="search-main">
     <div class="searchbar">
         <form method="get" id="searchform" action="/search" accept-charset="UTF-8">

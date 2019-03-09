@@ -60,7 +60,7 @@
                     <%--主页文章的标题start--%>
                     <header class="entry-header">
                         <h2 class="entry-title">
-                            <a href="/article/${a.articleId}"
+                            <a  href="/article/${a.articleId}"
                                rel="bookmark">
                                     ${a.articleTitle}
                             </a>
@@ -120,7 +120,8 @@
                     </div><!-- .entry-content -->
 
                     <span class="entry-more">
-                        <a href="/article/${a.articleId}"
+                        <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                        <a style=" text-decoration: none; " href="/article/${a.articleId}"
                            rel="bookmark">
                             Read more
                         </a>

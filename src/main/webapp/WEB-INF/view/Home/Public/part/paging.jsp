@@ -33,7 +33,8 @@
             </c:choose>
                 <%--显示第一页的页码--%>
             <c:if test="${begin >= 2 }">
-                <a class="page-numbers" href="${pageUrlPrefix}=1">1</a>
+                <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                <a class="page-numbers" style=" text-decoration: none" href="${pageUrlPrefix}=1">1</a>
             </c:if>
                 <%--显示点点点--%>
             <c:if test="${begin  > 2 }">
@@ -46,7 +47,8 @@
                         <a class="page-numbers current">${i}</a>
                     </c:when>
                     <c:otherwise>
-                        <a class="page-numbers" href="${pageUrlPrefix}=${i}">${i}</a>
+                        <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                        <a class="page-numbers" style=" text-decoration: none;" href="${pageUrlPrefix}=${i}">${i}</a>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
@@ -56,7 +58,8 @@
             </c:if>
                 <%-- 显示最后一页的数字 --%>
             <c:if test="${end < pageInfo.pages }">
-                <a href="${pageUrlPrefix}=${pageInfo.pages}">${pageInfo.pages}</a>
+                <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                <a style=" text-decoration: none;" href="${pageUrlPrefix}=${pageInfo.pages}">${pageInfo.pages}</a>
             </c:if>
                 <%--下一页 --%>
             <c:choose>
@@ -64,7 +67,8 @@
                     <%--到了尾页隐藏，下一页按钮--%>
                 </c:when>
                 <c:otherwise>
-                    <a class="page-numbers" href="${pageUrlPrefix}=${pageInfo.pageNum+1}">
+                    <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                    <a class="page-numbers" style=" text-decoration: none;" href="${pageUrlPrefix}=${pageInfo.pageNum+1}">
                         <span class="fa fa-angle-right"></span>
                     </a>
                 </c:otherwise>

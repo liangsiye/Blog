@@ -1447,12 +1447,15 @@ a, button, input {
     font-size: 16px;
     font-size: 1.6rem;
     line-height: 20px;
+
 }
 
 .archive-content {
     color: #000;
     /*color: #777;*/
     overflow-x: hidden;
+    /*text-decoration: underline;*/
+
 }
 
 /*文章的左中间的横条块*/
@@ -1808,6 +1811,12 @@ a, button, input {
 .entry-title-clear {
     margin-bottom: 40px;
 }
+
+a-title{
+    text-decoration: none;}
+
+a-title:hover{
+    text-decoration: underline;}
 
 .single-content {
     font-size: 15px;
@@ -4301,6 +4310,7 @@ li.comments-anchor {
     background-color: #000000;/*当前页数的颜色*/
     color: #ffffff;
     border: 1px solid #4d4d4d;
+    text-decoration: none;
 }
 .pagination .dots {
     background: #fff;
