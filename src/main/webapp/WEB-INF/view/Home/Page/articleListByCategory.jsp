@@ -18,16 +18,16 @@
 </rapid:override>
 
 <%--点击导航栏菜单后，出现的面包屑导航。start--%>
-<%--<rapid:override name="breadcrumb">
-    <nav class="breadcrumb">
-        <a class="crumbs" href="/">
+<rapid:override name="breadcrumb">
+    <%--<nav class="breadcrumb">--%>
+        <%--<a class="crumbs" href="/">
             <i class="fa fa-home"></i>首页</a>
-        <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-right"></i>--%>
         <c:choose>
             <c:when test="${category != null}">
-                <a href="/category/${category.categoryId}">${category.categoryName}</a>
+                <%--<a href="/category/${category.categoryId}">${category.categoryName}</a>
                 <a href="/category/${category.categoryId}"></a>
-                <i class="fa fa-angle-right"></i> 文章
+                <i class="fa fa-angle-right"></i> 文章--%>
             </c:when>
             <c:otherwise>
                 该分类不存在
@@ -35,8 +35,8 @@
 
         </c:choose>
 
-    </nav>
-</rapid:override>--%>
+    <%--</nav>--%>
+</rapid:override>
 <%--面包屑导航 end--%>
 
 

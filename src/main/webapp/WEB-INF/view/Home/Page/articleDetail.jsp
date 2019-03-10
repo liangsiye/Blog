@@ -486,11 +486,11 @@
 
 <%--侧边栏 start--%>
 <rapid:override name="right">
-    <%@include file="../Public/part/sidebar-article.jsp" %>
+    <%@include file="../Public/part/sidebar-1.jsp" %>
 </rapid:override>
 <%--侧边栏 end--%>
 
-<rapid:override name="footer-script">
+<%--<rapid:override name="footer-script">
     <script src="/js/jquery.cookie.js"></script>
 
     <script type="text/javascript">
@@ -503,7 +503,7 @@
         });
     </script>
 
-</rapid:override>
+</rapid:override>--%>
 
 
 <%@ include file="../Public/framework.jsp" %>

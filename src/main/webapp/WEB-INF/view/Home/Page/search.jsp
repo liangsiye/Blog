@@ -15,8 +15,11 @@
     <%--面包屑导航 start--%>
     <nav class="breadcrumb">
         <a class="crumbs" href="/">
-            <%--<i class="fa fa-home"></i>首页</a>
-            <i class="fa fa-angle-right"></i>--%>
+            <%--<i class="fa fa-home"></i>首页--%>
+        </a>
+            <%--<i class="fa fa-angle-right"></i>--%>
+
+
         搜索 ${param.keywords} 找到 ${pageInfo.total} 个与之相关的文章
     </nav>
     <%--面包屑导航 end--%>
@@ -36,12 +39,12 @@
                             <article class="post">
 
                                 <figure class="thumbnail">
-                                    <a href="/article/${a.articleId}">
-                                        <%--<img width="280" height="210"
+                                    <%--<a href="/article/${a.articleId}">
+                                        <img width="280" height="210"
                                              src="/img/thumbnail/random/img_${a.articleId%15}.jpg"
                                              class="attachment-content size-content wp-post-image"
-                                             alt="${a.articleTitle}">--%>
-                                    </a>
+                                             alt="${a.articleTitle}">
+                                    </a>--%>
                                         <%--主页文章的左上角的分类字--%><%--注意：修改后变成右下角了--%>
                                     <span class="cat">
                                               <a href="/category/${a.categoryList[0].categoryId}">${a.categoryList[0].categoryName}</a>
@@ -123,6 +126,13 @@
         </section>
     </section>
 </rapid:override>
+
+<%--侧边栏 start
+<rapid:override name="right">
+    <%@include file="../Public/part/sidebar-1.jsp" %>
+</rapid:override>
+侧边栏 end--%>
+
 
 
 

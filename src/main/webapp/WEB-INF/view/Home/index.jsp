@@ -137,7 +137,7 @@
 
 <%--侧边栏 start--%>
 <rapid:override name="right">
-    <%@include file="Public/part/sidebar-main.jsp" %>
+    <%@include file="Public/part/sidebar-2.jsp" %>
 </rapid:override>
 <%--侧边栏 end--%>
 

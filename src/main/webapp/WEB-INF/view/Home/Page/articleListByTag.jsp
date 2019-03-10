@@ -18,15 +18,15 @@
 </rapid:override>
 
 <%--面包屑导航 start--%>
-<%--<rapid:override name="breadcrumb">
-    <nav class="breadcrumb">
+<rapid:override name="breadcrumb">
+    <%--<nav class="breadcrumb">
         <a class="crumbs" href="/">
             <i class="fa fa-home"></i>首页</a>
-        <i class="fa fa-angle-right"></i>
+        <i class="fa fa-angle-right"></i>--%>
         <c:choose>
             <c:when test="${tag != null}">
-                <a href="/tag/${tag.tagId}">${tag.tagName}</a>
-                <i class="fa fa-angle-right"></i> 文章
+                <%--<a href="/tag/${tag.tagId}">${tag.tagName}</a>
+                <i class="fa fa-angle-right"></i> 文章--%>
             </c:when>
             <c:otherwise>
                 该标签不存在
@@ -36,24 +36,7 @@
 
     </nav>
 
-    <nav class="breadcrumb">
-        <a class="crumbs" href="/">
-            <i class="fa fa-home"></i>首页</a>
-        <i class="fa fa-angle-right"></i>
-        <c:choose>
-            <c:when test="${tag != null}">
-                <a href="/tag/${tag.tagId}">${tag.tagName}</a>
-                <i class="fa fa-angle-right"></i> 文章
-            </c:when>
-            <c:otherwise>
-                该标签不存在
-            </c:otherwise>
-
-        </c:choose>
-
-    </nav>
-
-</rapid:override>--%>
+</rapid:override>
 <%--面包屑导航 end--%>
 
 

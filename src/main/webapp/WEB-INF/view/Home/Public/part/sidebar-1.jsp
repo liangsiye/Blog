@@ -1,5 +1,5 @@
-<%--
-    一般用于正文侧边栏：有效果
+<%--打开文章和搜索结果后的页面
+    一般用于正文侧边栏：
     包括 搜索，热评文章，所有标签，随机文章 等小工具
 --%>
 
@@ -9,18 +9,41 @@
 <div id="sidebar" class="widget-area all-sidebar"
      style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
 
-        <%--搜索框--这个没有效果的%>
-       <%-- <aside class="widget widget_search">
+
+        <%--搜索框--%>
+        <%--<aside class="widget widget_search">
             <div class="searchbar">
-                <&lt;%&ndash;form method="get" id="searchform1" action="/search">
+                <form method="get" id="searchform1" action="/search">
                     <span> <input type="text" value="" name="keywords" id="s1" placeholder="输入搜索内容" required="">
                         <button type="submit" id="searchsubmit1">搜索</button>
                     </span>
-                </form>&ndash;%&gt;
+                </form>
             </div>
             <div class="clear"></div>
         </aside>--%>
         <%--搜索框--%>
+
+
+            <%--搜索是无结果就会出现右边的所有标签的显示bug--%>
+            <%--所有标签 start--%>
+            <aside class="widget">
+                <h3 class="widget-title">
+                    <i class="fa fa-bars"></i>所有标签
+                </h3>
+                <div class="tagcloud">
+                    <c:forEach items="${allTagList}" var="t">
+                        <a href="/tag/${t.tagId}"
+                           class="tag-link-129 tag-link-position-1"
+                           style="font-size: 14px;">
+                                ${t.tagName}
+                        </a>
+                    </c:forEach>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </aside>
+            <%--所有标签 end--%>
+
 
         <%--热评文章 start--%>
         <%--<aside class="widget hot_comment" >
@@ -42,27 +65,7 @@
         </aside>--%>
         <%--热评文章 end--%>
 
-        <%--所有标签 start--%>
-        <aside class="widget">
 
-            <%--所有标签的字 start--%>
-            <h3 class="widget-title">
-                <i class="fa fa-bars"></i>所有标签
-            </h3>
-                <%--所有标签的字 end--%>
-            <div class="tagcloud">
-                <c:forEach items="${allTagList}" var="t">
-                    <a href="/tag/${t.tagId}"
-                       class="tag-link-129 tag-link-position-1"
-                       style="font-size: 14px;">
-                            ${t.tagName}
-                    </a>
-                </c:forEach>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </aside>
-        <%--所有标签 end--%>
 
         <%--博客主体-右侧侧边栏-随机文章 start--%>
         <%--<aside id="random_post-7" class="widget random_post wow fadeInUp" data-wow-delay="0.3s">

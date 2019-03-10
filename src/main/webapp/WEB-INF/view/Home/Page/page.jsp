@@ -1,4 +1,3 @@
-<%--
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -6,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 
-&lt;%&ndash;<rapid:override name="breadcrumb">
+<%--<rapid:override name="breadcrumb">
     &lt;%&ndash;面包屑导航 start&ndash;%&gt;
     <nav class="breadcrumb">
         <a class="crumbs" href="/">
@@ -20,10 +19,10 @@
         正文my
     </nav>
     &lt;%&ndash;面包屑导航 end&ndash;%&gt;
-</rapid:override>&ndash;%&gt;
+</rapid:override>--%>
 
 <rapid:override name="left">
-    &lt;%&ndash;博客主体-左侧文章正文 start&ndash;%&gt;
+    <%--博客主体-左侧文章正文 start--%>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
             <article class="post" >
@@ -67,12 +66,12 @@
         </main>
         <!-- .site-main -->
     </div>
-    &lt;%&ndash;博客主体-左侧文章正文end&ndash;%&gt;
+    <%--博客主体-左侧文章正文end--%>
 </rapid:override>
-&lt;%&ndash;侧边栏 start&ndash;%&gt;
+<%--侧边栏 start--%>
 <rapid:override name="right">
-    <%@include file="../Public/part/sidebar-article2.jsp" %>
+    <%@include file="../Public/part/sidebar-3.jsp" %>
 </rapid:override>
-&lt;%&ndash;侧边栏 end&ndash;%&gt;
+<%--侧边栏 end--%>
 
-<%@ include file="../Public/framework.jsp" %>--%>
+<%@ include file="../Public/framework.jsp" %>
