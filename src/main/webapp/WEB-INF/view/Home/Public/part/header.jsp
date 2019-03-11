@@ -4,7 +4,14 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+</head>
+
+<body>
 <%--导航 start--%>
 <header id="masthead" class="site-header">
     <%--顶部菜单 start--%>
@@ -41,9 +48,11 @@
     <%--主要菜单 satrt--%>
     <div id="menu-box">
         <div id="top-menu">
-                <span class="nav-search">
+                <%--<span class="nav-search">
                     <i class="fa fa-search"></i>
-                </span>
+                </span>--%>
+
+
             <%--主页的左上角的名称--%>
             <%--<div class="logo-site"><h1 class="site-title">
                 <a href="/" title="${options.optionSiteTitle}">${options.optionSiteTitle}</a>
@@ -75,14 +84,14 @@
                             </li>
 
                             <%--这是标签的，有二级菜单，修改后的。--%>
-                            <c:forEach items="${allCategoryList}" var="category">
-                                <c:if test="${category.categoryPid==0 && category.categoryId==15}"><%--获取数据库的categoryPid==0的字段后显示到主页导航栏--%>
+                            <%--<c:forEach items="${allCategoryList}" var="category">--%>
+                                <%--<c:if test="${category.categoryPid==0 && category.categoryId==15}">&lt;%&ndash;获取数据库的categoryPid==0的字段后显示到主页导航栏&ndash;%&gt;--%>
                                     <li>
                                         <%--<a href="/category/${category.categoryId}">--%>
                                                 <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
                                         <a style=" text-decoration: none; " href="/map">
-                                            <i class="${category.categoryIcon}"></i>
-                                            <span class="font-text">${category.categoryName}&nbsp;</span>
+                                            <i class="fa fa-tags"></i>
+                                            <span class="font-text">标签&nbsp;</span>
                                         </a>
 
                                         <%--导航栏的子菜单start--%>
@@ -98,21 +107,21 @@
                                             <%--导航栏的子菜单end--%>
 
                                     </li>
-                                </c:if>
-                            </c:forEach>
+                                <%--</c:if>--%>
+                            <%--</c:forEach>--%>
 
                             <%--这是档案的，没有二级菜单，修改后的。--%>
-                            <c:forEach items="${allCategoryList}" var="category">
-                                <c:if test="${category.categoryPid==0 && category.categoryId==10 }"><%--获取数据库的categoryPid==0的字段后显示到主页导航栏--%>
+                            <%--<c:forEach items="${allCategoryList}" var="category">
+                                <c:if test="${category.categoryPid==0 && category.categoryId==10 }">--%><%--获取数据库的categoryPid==0的字段后显示到主页导航栏--%>
                                     <li>
                                             <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
                                             <a style=" text-decoration: none; " href="/articleFile">
-                                                <i class="${category.categoryIcon}"></i>
-                                                <span class="font-text">${category.categoryName}&nbsp;</span>
+                                                <i class="fa fa-archive"></i>
+                                                <span class="font-text">档案&nbsp;</span>
                                             </a>
                                     </li>
-                                </c:if>
-                            </c:forEach>
+                              <%--  </c:if>
+                            </c:forEach>--%>
 
                             <%--主要菜单其余部分 leetcode和留言两个导航栏--%>
                             <%--<c:forEach items="${menuList}" var="m">
@@ -139,18 +148,22 @@
 </header><!-- #masthead -->
 <%--导航 end start--%>
 
-<%--搜索框 start这是点击搜索图标后弹出的搜索框--%>
+<%--修改后的搜索框 start 不是点击搜索图标后弹出的搜索框,而是直接显示搜索框--%>
 <div id="search-main">
-    <div class="searchbar">
+    <%--<div class="searchbar">--%>
+    <div class="search d5"> <%--css文件的1154行是修改后的搜索框--%>
         <form method="get" id="searchform" action="/search" accept-charset="UTF-8">
+        <%--<form method="get" id="searchform" action="" accept-charset="UTF-8">--%>
             <span>
-                <input type="text" value="" name="keywords" id="s" placeholder="输入搜索内容"required="">
-                <button type="submit" id="searchsubmit">搜索</button>
+                <input type="text" value="" name="keywords" id="s" placeholder="搜索 Blog"required="">
+                <%--<button type="submit" id="searchsubmit">搜索</button>--%>
+                <button type="submit" id="searchsubmit"></button>
+
             </span>
         </form>
     </div>
     <div class="clear"></div>
 </div>
+</body>
 <%--搜索框 end--%>
-
 <rapid:block name="breadcrumb"></rapid:block>

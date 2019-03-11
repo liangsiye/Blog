@@ -1,11 +1,10 @@
-<%--
 <%--保留此处 start--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %> //jsp不限层次继承页面----rapid
+<%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %> <%--jsp不限层次继承页面----rapid--%>
 <%--保留此处 end--%>
 <rapid:override name="title">
     - 修改文章
@@ -116,7 +115,7 @@
 </rapid:override>
 
 
-<rapid:override name="footer-script"> //重写父页面中叫做footer-script的部分。
+<rapid:override name="footer-script"> <%--重写父页面中叫做footer-script的部分。--%>
 
     <script>
 
@@ -202,6 +201,4 @@
 
 
 <%--此句必须放在最后--%>
-<%@ include file="../Public/framework.jsp" %> //引入父页面/Public/framework.jsp
-
---%>
+<%@ include file="../Public/framework.jsp" %> <%--引入父页面/Public/framework.jsp--%>

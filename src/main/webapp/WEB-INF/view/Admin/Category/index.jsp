@@ -98,7 +98,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <%--<c:forEach items="${categoryList}" var="c">
+                <c:forEach items="${categoryList}" var="c">
                     <c:if test="${c.categoryPid==0}">
                         <tr>
                             <td>
@@ -115,8 +115,8 @@
                             </td>
                             <td>${c.categoryId}</td>
                             <td>${c.categoryPid}</td>
-                        </tr>--%>
-                        <%--<c:forEach items="${categoryList}" var="c2">
+                        </tr>
+                        <c:forEach items="${categoryList}" var="c2">
                             <c:if test="${c2.categoryPid==c.categoryId}">
                                 <tr>
                                     <td>
@@ -135,7 +135,7 @@
                                     <td>${c2.categoryPid}</td>
                                 </tr>
                             </c:if>
-                        </c:forEach>--%>
+                        </c:forEach>
                     </c:if>
 
 

@@ -19,6 +19,7 @@
 
     <%--后台登陆的记住密码的勾--%>
     <link rel='stylesheet' id='dashicons-css'  href='/plugin/login/dashicons.min.css' type='text/css' media='all' />
+    <%--后台登陆的登陆按钮的背景图形--%>
     <link rel='stylesheet' id='buttons-css'  href='/plugin/login/buttons.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='forms-css'  href='/plugin/login/forms.min.css' type='text/css' media='all' />
     <link rel='stylesheet' id='l10n-css'  href='/plugin/login/l10n.min.css' type='text/css' media='all' />
@@ -66,7 +67,7 @@
 <div id="login">
     <%--<h1><a href="/" title="欢迎您光临本站！十大发生发生发啊师傅打发打发打发打发打发打发打发打发" tabindex="-1">${options.optionSiteTitle}</a></h1>--%>
 
-    <h1><a href="/" title="欢迎您光临本站！十大发生发生发啊师傅打发打发打发打发打发打发打发打发" tabindex="-1"></a></h1>
+    <%--<h1><a href="/" title="欢迎您光临本站！十大发生发生发啊师傅打发打发打发打发打发打发打发打发" tabindex="-1"></a></h1>--%>
 
     <%
          String username = "";

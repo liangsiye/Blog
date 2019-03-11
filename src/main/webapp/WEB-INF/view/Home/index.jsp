@@ -143,7 +143,7 @@
 
 <%--主页最下面和的社区和开发者社区链接--%>
 <%--友情链接 start--%>
-<%--<rapid:override name="link">
+<rapid:override name="link">
     <div class="links-box">
         <div id="links">
             <c:forEach items="${linkList}" var="l">
@@ -158,7 +158,7 @@
             <div class="clear"></div>
         </div>
     </div>
-</rapid:override>--%>
+</rapid:override>
 <%--友情链接 end--%>
 
 <%@ include file="Public/framework.jsp" %><%--加载这个jsp模板--%>

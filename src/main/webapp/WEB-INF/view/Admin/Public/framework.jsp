@@ -29,14 +29,14 @@
         </div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="/" target="_blank">前台</a></li>
+            <li class="layui-nav-item"><a href="/" target="_blank">返回前台</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
                     <dd><a href="/admin/article/insert">文章</a></dd>
                     <dd><a href="/admin/page/insert">页面</a></dd>
-                    <dd><a href="/admin/category/insert">分类</a></dd>
-                    <dd><a href="/admin/notice/insert">公告</a></dd>
+                    <%--<dd><a href="/admin/category/insert">分类</a></dd>--%>
+                    <%--<dd><a href="/admin/notice/insert">公告</a></dd>--%>
                     <dd><a href="/admin/link/insert">链接</a></dd>
                 </dl>
             </li>
@@ -52,7 +52,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a href="/admin/logout">退了</a>
+                <a href="/admin/logout">退出</a>
             </li>
         </ul>
     </div>

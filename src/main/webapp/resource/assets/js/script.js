@@ -1,8 +1,11 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
     // 搜索
     $(".nav-search").click(function () {
         $("#search-main").fadeToggle(300);
-    });
+    });*/
+
+
+
 
     // 菜单
     $(".nav-mobile").click(function () {

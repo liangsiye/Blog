@@ -58,7 +58,7 @@
 <script src="/js/superfish.js"></script>
 <script src='/js/sticky.js'></script>
 <script src="/js/script.js"></script>
-<script src="/plugin/layui/layui.all.js"></script>
+<%--<script src="/plugin/layui/layui.all.js"></script>--%>
 
 
 <rapid:block name="footer-script"></rapid:block>
