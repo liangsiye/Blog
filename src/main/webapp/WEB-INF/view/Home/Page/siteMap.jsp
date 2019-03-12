@@ -7,15 +7,15 @@
 <%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
 
 <rapid:override name="description">
-    <meta name="description" content="档案"/>
+    <meta name="description" content="站点"/>
 </rapid:override>
 
 <rapid:override name="keywords">
-    <meta name="keywords" content="档案"/>
+    <meta name="keywords" content="站点"/>
 </rapid:override>
 
 <rapid:override name="title">
-    <title>档案</title>
+    <title>${options.optionSiteTitle}&nbsp;·&nbsp;站点</title>
 </rapid:override>
 
 <rapid:override name="header-style">

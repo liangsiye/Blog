@@ -60,6 +60,7 @@ function insertDraft() {
             async: false,
             type: "POST",
             url:'/admin/article/insert',
+            // url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert',
             contentType : "application/x-www-form-urlencoded; charset=utf-8",
             dataType: "text",
             complete:function () {
@@ -77,6 +78,7 @@ function deleteArticle(id) {
             async: false,
             type: "POST",
             url:'/admin/article/delete/'+id,
+            // url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/delete/'+id,
             contentType : "application/x-www-form-urlencoded; charset=utf-8",
             dataType: "text",
             complete:function () {
@@ -90,6 +92,7 @@ function deleteArticle(id) {
 function queryArticle() {
     //提交form
     $("#articleForm").attr("action", "/admin/article/search");
+    // $("#articleForm").attr("action", "/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/search");
     $("#articleForm").submit();
 }
 
@@ -103,6 +106,7 @@ function confirmDeleteArticleBatch() {
             async: false,
             type: "POST",
             url:'/admin/article/deleteBatch',
+            // url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/deleteBatch',
             data:{ids:text},
             contentType : "application/x-www-form-urlencoded; charset=utf-8",
             dataType: "text",

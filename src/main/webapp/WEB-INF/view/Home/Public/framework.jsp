@@ -16,7 +16,7 @@
     <meta name="applicable-device" content="pc,mobile">
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <%--<link rel="shortcut icon" href="/img/logo.png">--%>
+    <link rel="shortcut icon" href="/img/logo.png">
     <rapid:block name="description">
         <meta name="description" content="${options.optionMetaDescrption}"/>
     </rapid:block>
@@ -25,7 +25,7 @@
     </rapid:block>
     <rapid:block name="title">
         <title>
-                ${options.optionSiteTitle}-${options.optionSiteDescrption}
+                ${options.optionSiteTitle}&nbsp;·&nbsp;${options.optionSiteDescrption}
         </title>
     </rapid:block>
 
@@ -58,7 +58,7 @@
 <script src="/js/superfish.js"></script>
 <script src='/js/sticky.js'></script>
 <script src="/js/script.js"></script>
-<%--<script src="/plugin/layui/layui.all.js"></script>--%>
+<script src="/plugin/layui/layui.all.js"></script>
 
 
 <rapid:block name="footer-script"></rapid:block>

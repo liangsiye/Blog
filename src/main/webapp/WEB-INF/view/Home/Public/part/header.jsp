@@ -75,13 +75,22 @@
                         <%--控制主页的导航栏文字的框架start--%>
                         <ul id="menu-pcmenu" class="down-menu nav-menu sf-js-enabled sf-arrows">
 
-                            <li>
-                                <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
-                                <a style=" text-decoration: none; " href="/">
-                                    <i class="fa-home fa"></i>
-                                    <span class="font-text">首页</span>
-                                </a>
-                            </li>
+
+                            <%--主页的导航栏图标位置start--%>
+                                <li>
+                                    <div class="index-logo">
+                                        <a href="/"><img src="/img/logo.png"></a>
+                                    </div>
+                                </li>
+                                <%--主页的导航栏图标位置end--%>
+
+                                <li>
+                                        <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
+                                    <a style=" text-decoration: none; " href="/">
+                                        <i class="fa fa-home "></i>
+                                        <span class="font-text">首页</span>
+                                    </a>
+                                </li>
 
                             <%--这是标签的，有二级菜单，修改后的。--%>
                             <%--<c:forEach items="${allCategoryList}" var="category">--%>
@@ -91,7 +100,7 @@
                                                 <%--添加text-decoration: none取消下划线，因为在css里a{}和a:hover添加了text-decoration: underline--%>
                                         <a style=" text-decoration: none; " href="/map">
                                             <i class="fa fa-tags"></i>
-                                            <span class="font-text">标签&nbsp;</span>
+                                            <span class="font-text">站点&nbsp;</span>
                                         </a>
 
                                         <%--导航栏的子菜单start--%>
@@ -166,4 +175,6 @@
 </div>
 </body>
 <%--搜索框 end--%>
+
+
 <rapid:block name="breadcrumb"></rapid:block>

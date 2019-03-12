@@ -35,7 +35,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--&lt;!&ndash;文件上传&ndash;&gt;-->
+    <!--文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <!--设置上传最大尺寸为50MB-->
         <property name="maxUploadSizePerFile" value="52428800"/>
@@ -59,19 +59,23 @@
             <bean class="com.che.blog.interceptor.HomeResourceInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
-            <mvc:mapping path="/admin"/>
+            <!--<mvc:mapping path="/admin"/>-->
+            <mvc:mapping path="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd"/>
             <bean class="com.che.blog.interceptor.SecurityInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
-            <mvc:mapping path="/admin/**"/>
+            <!--<mvc:mapping path="/admin/**"/>-->
+            <mvc:mapping path="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/**"/>
             <bean class="com.che.blog.interceptor.SecurityInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
-            <mvc:mapping path="/admin"/>
+            <!--<mvc:mapping path="/admin"/>-->
+            <mvc:mapping path="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd"/>
             <bean class="com.che.blog.interceptor.AdminResourceInterceptor"/>
         </mvc:interceptor>
         <mvc:interceptor>
-            <mvc:mapping path="/admin/**"/>
+            <!--<mvc:mapping path="/admin/**"/>-->
+            <mvc:mapping path="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/**"/>
             <bean class="com.che.blog.interceptor.AdminResourceInterceptor"/>
         </mvc:interceptor>
 

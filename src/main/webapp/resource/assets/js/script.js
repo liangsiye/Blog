@@ -1,9 +1,9 @@
-/*$(document).ready(function () {
-    // 搜索
-    $(".nav-search").click(function () {
+$(document).ready(function () {
+    // 点击图标后弹出的搜索栏
+   /* $(".nav-search").click(function () {
         $("#search-main").fadeToggle(300);
-    });*/
-
+    });
+*/
 
 
 

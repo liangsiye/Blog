@@ -14,7 +14,7 @@
 </rapid:override>
 
 <rapid:override name="title">
-    <title>档案</title>
+    <title>${options.optionSiteTitle}&nbsp;·&nbsp;档案</title>
 </rapid:override>
 
 <rapid:override name="breadcrumb">

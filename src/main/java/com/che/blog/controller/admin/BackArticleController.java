@@ -24,11 +24,14 @@ import java.util.List;
 
 
 /**
- * @author che
+ * 后台导航的全部文章的页面显示
  */
 @Controller
-@RequestMapping("/admin/article")
-public class BackArticleController {
+/*前端点击后，发出请求，这时控制器接受请求，如果符合这个连接"/admin/article"请求，
+就会调用model处理业务，最后model处理完成后，控制器再把结果返回给前端*/
+/*注意：/admin 连接有拦截器*/
+@RequestMapping("/admin/article")/*如果没有经过拦截，打开这个网址就能直接进入后台管理*//*这个连接/admin/article在framework.jsp页面*/
+public class     BackArticleController {
     @Autowired
     private ArticleService articleService;
 
@@ -39,7 +42,7 @@ public class BackArticleController {
     private CategoryService categoryService;
 
     /**
-     * 后台文章列表显示
+     * 后台导航的文章列表显示
      *
      * @return modelAndView
      */
@@ -56,12 +59,13 @@ public class BackArticleController {
         }
         PageInfo<Article> articlePageInfo = articleService.pageArticle(pageIndex, pageSize, criteria);
         model.addAttribute("pageInfo", articlePageInfo);
-        return "Admin/Article/index";
+//        return "Admin/Article/index";
+        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/Article/index";
     }
 
 
     /**
-     * 后台添加文章页面显示
+     * 后台导航的添加文章页面显示
      *
      * @return
      */
@@ -75,7 +79,7 @@ public class BackArticleController {
     }
 
     /**
-     * 后台添加文章提交操作
+     * 后台导航的添加文章提交操作
      *
      * @param articleParam
      * @return

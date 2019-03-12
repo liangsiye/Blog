@@ -364,6 +364,21 @@ a, button, input {
 
     }
 }
+
+/*主页导航栏的左边图标*/
+.index-logo img{
+    width:32px;
+    height:32px;
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: -11px;
+    right: 0;
+    bottom: -88px;
+}
+
+
 /** weibo **/
 .weibo {
     position: absolute;

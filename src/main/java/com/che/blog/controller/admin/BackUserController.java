@@ -183,7 +183,8 @@ public class BackUserController {
         User user =  userService.getUserById(id);
         modelAndView.addObject("user",user);
 
-        modelAndView.setViewName("Admin/User/profile");
+//        modelAndView.setViewName("Admin/User/profile");
+        modelAndView.setViewName("7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/User/profile");
         return modelAndView;
     }
 }

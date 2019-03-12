@@ -44,7 +44,8 @@ public class AdminController {
      *
      * @return
      */
-    @RequestMapping("/admin")
+//    @RequestMapping("/admin")
+    @RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd")/*后台地址*/
     public String index(Model model)  {
         //文章列表
         List<Article> articleList = articleService.listRecentArticle(5);
@@ -52,7 +53,8 @@ public class AdminController {
         //评论列表
         List<Comment> commentList = commentService.listRecentComment(5);
         model.addAttribute("commentList",commentList);
-        return "Admin/index";
+//        return "Admin/index";
+        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/index";
     }
 
     /**
@@ -62,7 +64,8 @@ public class AdminController {
      */
     @RequestMapping("/login")
     public String loginPage() {
-        return "Admin/login";
+//        return "Admin/login";
+        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/login";
     }
 
     /**
