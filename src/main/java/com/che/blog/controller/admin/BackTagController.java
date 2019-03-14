@@ -18,7 +18,8 @@ import java.util.List;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/tag")
+//@RequestMapping("/admin/tag")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag")/*点击有这个后缀的连接，控制器就会判断是否一样，一样就会返回结果，没有就会报404错误*/
 public class BackTagController {
 
     @Autowired
@@ -44,7 +45,7 @@ public class BackTagController {
 
 
     /**
-     * 后台添加分类页面显示
+     * 后台添加分类提交后显示页面
      *
      * @param tag
      * @return
@@ -52,11 +53,12 @@ public class BackTagController {
     @RequestMapping(value = "/insertSubmit",method = RequestMethod.POST)
     public String insertTagSubmit(Tag tag)  {
         tagService.insertTag(tag);
-        return "redirect:/admin/tag";
+//        return "redirect:/admin/tag";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag"; /*后台添加分类提交后跳转显示页面*/
     }
 
     /**
-     * 删除标签
+     * 后台删除标签后跳转的页面
      *
      * @param id 标签ID
      * @return
@@ -67,7 +69,8 @@ public class BackTagController {
         if (count == 0) {
             tagService.deleteTag(id);
         }
-        return "redirect:/admin/tag";
+//        return "redirect:/admin/tag";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag"; /*后台删除标签后跳转的页面*/
     }
 
     /**
@@ -92,7 +95,7 @@ public class BackTagController {
 
 
     /**
-     * 编辑标签提交
+     * 后台编辑标签提交
      *
      * @param tag
      * @return
@@ -100,6 +103,7 @@ public class BackTagController {
     @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
     public String editTagSubmit(Tag tag)  {
         tagService.updateTag(tag);
-        return "redirect:/admin/tag";
+//        return "redirect:/admin/tag";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag"; /*后台编辑标签提交后跳转的页面*/
     }
 }

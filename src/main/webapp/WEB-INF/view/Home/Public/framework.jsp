@@ -17,6 +17,8 @@
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
     <link rel="shortcut icon" href="/img/logo.png">
+
+    <%--rapid:block是给加载了framework.jsp模板的页面使用--%>
     <rapid:block name="description">
         <meta name="description" content="${options.optionMetaDescrption}"/>
     </rapid:block>

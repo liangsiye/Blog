@@ -60,7 +60,6 @@
                 <c:forEach items="${pageInfo.list}" var="a">
                     <tr>
                         <td>
-                            <a href="/article/"/>
                             <a href="/article/${a.articleId}"
                                target="_blank">
                                     ${a.articleTitle} <%--后台文章的标题--%>

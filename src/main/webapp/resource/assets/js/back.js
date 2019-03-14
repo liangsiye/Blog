@@ -1,3 +1,4 @@
+/*这个js和controller.admin后台控制器里面的Java文件配合使用的*/
 function DoCheck() {
     var ch = document.getElementsByName("ids");
     if (document.getElementById("allSelect").checked == true) {
@@ -59,8 +60,8 @@ function insertDraft() {
         $.ajax({
             async: false,
             type: "POST",
-            url:'/admin/article/insert',
-            // url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert',
+            // url:'/admin/article/insert',
+            url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert',
             contentType : "application/x-www-form-urlencoded; charset=utf-8",
             dataType: "text",
             complete:function () {
@@ -77,8 +78,8 @@ function deleteArticle(id) {
         $.ajax({
             async: false,
             type: "POST",
-            url:'/admin/article/delete/'+id,
-            // url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/delete/'+id,
+            // url:'/admin/article/delete/'+id,
+            url:'/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/delete/'+id,
             contentType : "application/x-www-form-urlencoded; charset=utf-8",
             dataType: "text",
             complete:function () {
@@ -139,7 +140,8 @@ function checkUserName() {
     $.ajax({
         async: false,//同步，待请求完毕后再执行后面的代码
         type: "POST",
-        url: '/admin/user/checkUserName',
+        // url: '/admin/user/checkUserName',
+        url: '/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user/checkUserName',
         contentType: "application/x-www-form-urlencoded; charset=utf-8",
         data: {"username": $("#userName").val(), "id": $("#userId").val()},
         dataType: "json",
@@ -168,7 +170,8 @@ function checkUserEmail() {
     $.ajax({
         async: false,//同步，待请求完毕后再执行后面的代码
         type: "POST",
-        url: '/admin/user/checkUserEmail',
+        // url: '/admin/user/checkUserEmail',
+        url: '/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user/checkUserEmail',
         contentType: "application/x-www-form-urlencoded; charset=utf-8",
         data: {"email": $("#userEmail").val(), "id": $("#userId").val()},
         dataType: "json",

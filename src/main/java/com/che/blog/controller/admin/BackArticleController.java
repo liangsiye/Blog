@@ -19,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -30,7 +31,8 @@ import java.util.List;
 /*前端点击后，发出请求，这时控制器接受请求，如果符合这个连接"/admin/article"请求，
 就会调用model处理业务，最后model处理完成后，控制器再把结果返回给前端*/
 /*注意：/admin 连接有拦截器*/
-@RequestMapping("/admin/article")/*如果没有经过拦截，打开这个网址就能直接进入后台管理*//*这个连接/admin/article在framework.jsp页面*/
+//@RequestMapping("/admin/article")/*如果没有经过拦截，打开这个网址就能直接进入后台管理*//*这个连接/admin/article在framework.jsp页面*/
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article")/*如果没有经过拦截，打开这个网址就能直接进入后台管理*//*这个连接/admin/article在framework.jsp页面*/
 public class     BackArticleController {
     @Autowired
     private ArticleService articleService;
@@ -52,15 +54,17 @@ public class     BackArticleController {
                         @RequestParam(required = false) String status, Model model) {
         HashMap<String, Object> criteria = new HashMap<>(1);
         if (status == null) {
-            model.addAttribute("pageUrlPrefix", "/admin/article?pageIndex");
+//            model.addAttribute("pageUrlPrefix", "/admin/article?pageIndex");
+            model.addAttribute("pageUrlPrefix", "/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article?pageIndex");
         } else {
             criteria.put("status", status);
-            model.addAttribute("pageUrlPrefix", "/admin/article?status=" + status + "&pageIndex");
+//            model.addAttribute("pageUrlPrefix", "/admin/article?status=" + status + "&pageIndex");
+            model.addAttribute("pageUrlPrefix", "/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article?status=" + status + "&pageIndex");
         }
         PageInfo<Article> articlePageInfo = articleService.pageArticle(pageIndex, pageSize, criteria);
         model.addAttribute("pageInfo", articlePageInfo);
-//        return "Admin/Article/index";
-        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/Article/index";
+        return "Admin/Article/index";
+//        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/Article/index";
     }
 
 
@@ -115,7 +119,8 @@ public class     BackArticleController {
         article.setTagList(tagList);
 
         articleService.insertArticle(article);
-        return "redirect:/admin/article";
+//        return "redirect:/admin/article";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article";/*后台导航的添加文章后跳转的页面地址*/
     }
 
 
@@ -157,7 +162,7 @@ public class     BackArticleController {
 
 
     /**
-     * 编辑文章提交
+     * 后台的编辑文章提交
      *
      * @param articleParam
      * @return
@@ -188,7 +193,8 @@ public class     BackArticleController {
         }
         article.setTagList(tagList);
         articleService.updateArticleDetail(article);
-        return "redirect:/admin/article";
+//        return "redirect:/admin/article";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article"; /*后台的编辑文章后跳转的页面地址*/
     }
 
 

@@ -71,7 +71,7 @@
                         菜单位置
                         <select name="menuLevel" id="">
                             <option value="1" <c:if test="${menu.menuLevel==1}">selected</c:if>>顶部菜单</option>
-                            <option value="2" <c:if test="${menu.menuLevel==2}">selected</c:if> >主要菜单</option>
+                            <%--<option value="2" <c:if test="${menu.menuLevel==2}">selected</c:if> >主要菜单</option>--%>
                         </select>
                     </div>
                     <br>
@@ -100,7 +100,7 @@
             <div class="layui-tab layui-tab-card">
                 <ul class="layui-tab-title">
                     <li class="layui-this">顶部菜单</li>
-                    <li>主要菜单</li>
+                    <%--<li>主要菜单</li>--%>
                 </ul>
                 <div class="layui-tab-content" style="height: auto;">
                     <div class="layui-tab-item layui-show">
@@ -144,7 +144,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <divx class="layui-tab-item">
+                    <%--<divx class="layui-tab-item">
                         <table class="layui-table" >
                             <colgroup>
                                 <col width="100">
@@ -174,9 +174,9 @@
                                         </td>
                                         <td>${m.menuOrder}</td>
                                         <td>
-                                            <%--<a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/edit/${m.menuId}" class="layui-btn layui-btn-mini">编辑</a>--%>
+                                            &lt;%&ndash;<a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/edit/${m.menuId}" class="layui-btn layui-btn-mini">编辑</a>&ndash;%&gt;
                                             <a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/edit/${m.menuId}" class="layui-btn layui-btn-mini">编辑</a>
-                                            <%--<a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/delete/${m.menuId}" class="layui-btn layui-btn-danger layui-btn-mini" onclick="return confirmDelete()">删除</a>--%>
+                                            &lt;%&ndash;<a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/delete/${m.menuId}" class="layui-btn layui-btn-danger layui-btn-mini" onclick="return confirmDelete()">删除</a>&ndash;%&gt;
                                             <a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu/delete/${m.menuId}" class="layui-btn layui-btn-danger layui-btn-mini" onclick="return confirmDelete()">删除</a>
                                         </td>
                                     </tr>
@@ -184,7 +184,7 @@
                             </c:forEach>
                             </tbody>
                         </table>
-                    </divx>
+                    </divx>--%>
                     <br><br><br>
                 </div>
             </div>

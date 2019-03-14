@@ -65,7 +65,7 @@
                     <div class="layui-input-block">
                         菜单位置
                         <select name="menuLevel" id="">
-                            <option value="1" selected>顶部菜单</option>
+                            <%--<option value="1" selected>顶部菜单</option>--%>
                             <option value="2" >主要菜单</option>
                         </select>
                     </div>
@@ -87,11 +87,12 @@
 
             <div class="layui-tab layui-tab-card">
                 <ul class="layui-tab-title">
-                    <li class="layui-this">顶部菜单</li>
-                    <li>主要菜单</li>
+                    <%--<li class="layui-this">顶部菜单</li>--%>
+                    <li class="layui-this">主要菜单</li>
+                    <%--<li>主要菜单</li>--%>
                 </ul>
                 <div class="layui-tab-content" style="height: auto;">
-                    <div class="layui-tab-item layui-show">
+                    <%--<div class="layui-tab-item layui-show">
 
                         <table class="layui-table" >
                             <colgroup>
@@ -138,8 +139,11 @@
                                 <li>1、Order的大小为菜单中各项目的顺序</li>
                             </ul>
                         </blockquote>
-                    </div>
-                    <div class="layui-tab-item">
+                    </div>--%>
+
+                    <%--主要菜单start--%>
+                        <div class="layui-tab-item layui-show">
+                    <%--<div class="layui-tab-item">--%>
                         <table class="layui-table" >
                             <colgroup>
                                 <col width="100">
@@ -188,6 +192,7 @@
                             </ul>
                         </blockquote>
                     </div>
+                        <%--主要菜单end--%>
                     <br><br><br>
                 </div>
             </div>

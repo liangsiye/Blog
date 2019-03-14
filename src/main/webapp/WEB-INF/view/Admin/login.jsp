@@ -15,6 +15,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>${options.optionSiteTitle}&nbsp;·&nbsp;登录</title>
     <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/plugin/font-awesome/css/font-awesome.css">
     <link rel="shortcut icon" href="/img/logo.png">
 
     <%--后台登陆的记住密码的勾--%>
@@ -41,7 +42,8 @@
         .login form {
             background: #fdfdfe;
             /*background: rgb(77, 77, 77);*/
-            border-radius: 2px;
+            /*border-radius: 2px;*/
+            border-radius: 8px;
             border: 1px solid #000000;
         }
         .login label {
@@ -115,8 +117,6 @@
         wp_attempt_focus();
         if(typeof wpOnload=='function')wpOnload();
     </script>
-
-    <%--<p id="backtoblog"><a href="/">&larr; 返回到blog</a></p>--%>
 
 </div>
 

@@ -19,7 +19,8 @@ import java.util.Objects;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/page")
+//@RequestMapping("/admin/page")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/page")
 public class BackPageController {
 
     @Autowired

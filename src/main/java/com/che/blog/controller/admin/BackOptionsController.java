@@ -13,7 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/options")
+//@RequestMapping("/admin/options")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/options")
 public class BackOptionsController {
 
     @Autowired
@@ -51,7 +52,7 @@ public class BackOptionsController {
     }
 
     /**
-     * 编辑基本信息提交
+     * 编辑后台主要选项的基本信息提交
      *
      * @param options
      * @return
@@ -65,7 +66,8 @@ public class BackOptionsController {
         } else {
             optionsService.updateOptions(options);
         }
-        return "redirect:/admin/options";
+//        return "redirect:/admin/options";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/options";/*后台主要选项的保存设置的按钮后跳转的页面*/
     }
 
 }

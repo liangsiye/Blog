@@ -18,7 +18,8 @@ import java.util.List;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/link")
+//@RequestMapping("/admin/link")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link")
 public class BackLinkController {
 
     @Autowired
@@ -69,7 +70,8 @@ public class BackLinkController {
         link.setLinkUpdateTime(new Date());
         link.setLinkStatus(1);
         linkService.insertLink(link);
-        return "redirect:/admin/link/insert";
+//        return "redirect:/admin/link/insert";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link/insert"; /*后台添加链接页面提交后跳转的页面*/
     }
 
     /**
@@ -82,7 +84,8 @@ public class BackLinkController {
     public String deleteLink(@PathVariable("id") Integer id)  {
 
         linkService.deleteLink(id);
-        return "redirect:/admin/link";
+//        return "redirect:/admin/link";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link"; /*后台的连接页面删除后跳转的页面*/
     }
 
     /**
@@ -116,6 +119,7 @@ public class BackLinkController {
     public String editLinkSubmit(Link link)  {
         link.setLinkUpdateTime(new Date());
         linkService.updateLink(link);
-        return "redirect:/admin/link";
+//        return "redirect:/admin/link";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link"; /*编辑链接提交后跳转的页面*/
     }
 }

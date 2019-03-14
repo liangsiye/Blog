@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 /**
  *
- * @author 言曌
+ * @author
  * @date 2018/12/4 上午12:24
  */
 public class RedisCache implements Cache {

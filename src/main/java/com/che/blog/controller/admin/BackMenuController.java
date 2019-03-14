@@ -17,7 +17,8 @@ import java.util.List;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/menu")
+//@RequestMapping("/admin/menu")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu")
 public class BackMenuController {
 
     @Autowired
@@ -47,7 +48,8 @@ public class BackMenuController {
             menu.setMenuOrder(MenuLevel.TOP_MENU.getValue());
         }
         menuService.insertMenu(menu);
-        return "redirect:/admin/menu";
+//        return "redirect:/admin/menu";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu";
     }
 
     /**
@@ -59,7 +61,8 @@ public class BackMenuController {
     @RequestMapping(value = "/delete/{id}")
     public String deleteMenu(@PathVariable("id") Integer id)  {
         menuService.deleteMenu(id);
-        return "redirect:/admin/menu";
+//        return "redirect:/admin/menu";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu";
     }
 
     /**

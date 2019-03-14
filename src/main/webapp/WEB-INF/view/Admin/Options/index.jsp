@@ -24,7 +24,7 @@
     <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
         <ul class="layui-tab-title">
             <li class="layui-this">基本信息</li>
-            <li>小工具</li>
+            <%--<li>小工具</li>--%>
         </ul>
         <div class="layui-tab-content">
             <br><br>
@@ -70,7 +70,8 @@
                     <div class="layui-input-inline">
                         <div class="layui-upload">
                             <div class="layui-upload-list" style="">
-                                <img class="layui-upload-img" src="${option.optionAboutsiteAvatar}" id="demo1" width="100"
+                                <%--<img class="layui-upload-img" src="${option.optionAboutsiteAvatar}" id="demo1" width="100"--%>
+                                <img class="layui-upload-img" src="/img/example.jpg" id="demo1" width="100"
                                      height="100">
                                 <p id="demoText"></p>
                             </div>

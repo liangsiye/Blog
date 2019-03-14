@@ -45,6 +45,7 @@ public class AdminController {
      * @return
      */
 //    @RequestMapping("/admin")
+    /*点击有这个后缀的连接，控制器就会判断是否一样，一样就会返回结果，没有就会报404错误*/
     @RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd")/*后台地址*/
     public String index(Model model)  {
         //文章列表
@@ -53,8 +54,8 @@ public class AdminController {
         //评论列表
         List<Comment> commentList = commentService.listRecentComment(5);
         model.addAttribute("commentList",commentList);
-//        return "Admin/index";
-        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/index";
+        return "Admin/index";/*返回的地址，是index页面在项目的地址*/
+//        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/index";
     }
 
     /**
@@ -64,8 +65,8 @@ public class AdminController {
      */
     @RequestMapping("/login")
     public String loginPage() {
-//        return "Admin/login";
-        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/login";
+        return "Admin/login";
+//        return "7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/login";
     }
 
     /**
@@ -122,7 +123,8 @@ public class AdminController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/admin/logout")
+//    @RequestMapping(value = "/admin/logout")
+    @RequestMapping(value = "/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/logout")
     public String logout(HttpSession session)  {
         session.removeAttribute("user");
         session.invalidate();

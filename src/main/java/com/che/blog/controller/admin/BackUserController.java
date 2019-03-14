@@ -20,7 +20,8 @@ import java.util.Map;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/user")
+//@RequestMapping("/admin/user")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user")
 public class BackUserController {
 
     @Autowired
@@ -125,7 +126,8 @@ public class BackUserController {
             user.setUserStatus(1);
             userService.insertUser(user);
         }
-        return "redirect:/admin/user";
+//        return "redirect:/admin/user";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user"; /*后台添加用户页面提交后跳转的页面*/
     }
 
     /**
@@ -137,7 +139,8 @@ public class BackUserController {
     @RequestMapping(value = "/delete/{id}")
     public String deleteUser(@PathVariable("id") Integer id)  {
         userService.deleteUser(id);
-        return "redirect:/admin/user";
+//        return "redirect:/admin/user";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user"; /*后台删除用户后跳转的页面*/
     }
 
     /**
@@ -167,7 +170,8 @@ public class BackUserController {
     @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
     public String editUserSubmit(User user)  {
         userService.updateUser(user);
-        return "redirect:/admin/user";
+//        return "redirect:/admin/user";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user"; /*编辑用户提交后跳转的页面*/
     }
 
     /**
@@ -183,8 +187,8 @@ public class BackUserController {
         User user =  userService.getUserById(id);
         modelAndView.addObject("user",user);
 
-//        modelAndView.setViewName("Admin/User/profile");
-        modelAndView.setViewName("7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/User/profile");
+        modelAndView.setViewName("Admin/User/profile");
+//        modelAndView.setViewName("7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/User/profile");
         return modelAndView;
     }
 }

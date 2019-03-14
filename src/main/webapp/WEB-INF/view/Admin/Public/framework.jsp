@@ -1,3 +1,4 @@
+<%--后台管理的模板，有右侧的导航栏--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -9,9 +10,9 @@
 <head>
     <meta charset="utf-8">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="shortcut icon" href="/img/logo.png"><%--博客图标--%>
     <title>
-        ${options.optionSiteTitle}后台
+        ${options.optionSiteTitle}
             <rapid:block name="title"></rapid:block>
     </title>
     <link rel="stylesheet" href="/plugin/layui/css/layui.css">
@@ -23,10 +24,11 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <%--<div class="layui-logo"><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd" style="color:#009688;">--%>
+        <%--<div class="layui-logo"><a href="/admin" style="color:#009688;">--%>
         <div class="layui-logo"><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd" style="color:#009688;">
-            <%--后台管理的主页的左上角的图标--%>
+            <%--后台管理的主页的左上角图标--%>
             <img src="/img/logo.png" class="layui-nav-img" title="" style="">${options.optionSiteTitle}&nbsp;后台
+            <%--${options.optionSiteTitle}后台&ndash;%&gt;--%>
         </a>
         </div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
@@ -35,10 +37,11 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">新建</a>
                 <dl class="layui-nav-child">
+                    <%--<dd><a href="/admin/article/insert">文章</a></dd>--%>
                     <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert">文章</a></dd>
                     <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/page/insert">页面</a></dd>
-                    <%--<dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category/insert">分类</a></dd>--%>
-                    <%--<dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/notice/insert">公告</a></dd>--%>
+                    <%--<dd><a href="/admin/category/insert">分类</a></dd>--%>
+                    <%--<dd><a href="/admin/notice/insert">公告</a></dd>--%>
                     <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link/insert">链接</a></dd>
                 </dl>
             </li>
@@ -50,11 +53,12 @@
                     ${loginUser.userName}
                 </a>
                 <dl class="layui-nav-child">
-                    <%--<dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user/profile/${loginUser.userId}">基本资料</a></dd>--%>
+                    <%--<dd><a href="/admin/user/profile/${loginUser.userId}">基本资料</a></dd>--%>
                     <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user/profile/${loginUser.userId}">基本资料</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
+                <%--<a href="/admin/logout">退出</a>--%>
                 <a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/logout">退出</a>
             </li>
         </ul>
@@ -67,17 +71,27 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">文章</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article">全部文章</a></dd>
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert">写文章</a></dd>
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category">全部分类</a></dd>
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag">全部标签</a></dd>
+                        <%--<dd><a href="/admin/article">全部文章</a></dd>--%>
+                        <%--<dd><a href="/admin/article/insert">写文章</a></dd>--%>
+                        <%--<dd><a href="/admin/category">全部分类</a></dd>--%>
+                        <%--<dd><a href="/admin/tag">全部标签</a></dd>--%>
+
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article">全部文章</a></dd>
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/article/insert">写文章</a></dd>
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category">全部分类</a></dd>
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/tag">全部标签</a></dd>
+
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">页面</a>
                     <dl class="layui-nav-child">
+                        <%--<dd><a href="/admin/page">全部页面</a></dd>--%>
+                        <%--<dd><a href="/admin/page/insert">添加页面</a></dd>--%>
+
                         <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/page">全部页面</a></dd>
                         <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/page/insert">添加页面</a></dd>
+
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -85,36 +99,48 @@
                         链接
                     </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link">全部链接</a></dd>
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link/insert">添加链接</a></dd>
+                        <%--<dd><a href="/admin/link">全部链接</a></dd>--%>
+                        <%--<dd><a href="/admin/link/insert">添加链接</a></dd>--%>
+
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link">全部链接</a></dd>
+                            <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/link/insert">添加链接</a></dd>
+
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <%--<li class="layui-nav-item">
                     <a href="javascript:;">公告</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/notice">全部公告</a></dd>
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/notice/insert">添加公告</a></dd>
+                        <dd><a href="/admin/notice">全部公告</a></dd>
+                        <dd><a href="/admin/notice/insert">添加公告</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/comment">
+                    <a href="/admin/comment">
                         评论
                     </a>
-                </li>
+                </li>--%>
                 <li class="layui-nav-item">
                     <a class="" href="javascript:;">
                         用户
                     </a>
                     <dl class="layui-nav-child">
+                        <%--<dd><a href="/admin/user">全部用户</a></dd>--%>
+                        <%--<dd><a href="/admin/user/insert">添加用户</a></dd>--%>
+
                         <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user">全部用户</a></dd>
                         <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/user/insert">添加用户</a></dd>
+
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">设置</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu">菜单</a></dd>
+                        <%--<dd><a href="/admin/menu">菜单</a></dd>--%>
+                        <%--<dd><a href="/admin/options">主要选项</a></dd>--%>
+
+                        <%--<dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/menu">菜单</a></dd>--%>
                         <dd><a href="/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/options">主要选项</a></dd>
+
                     </dl>
                 </li>
             </ul>
@@ -130,9 +156,10 @@
         </div>
     </div>
 
+    <!-- 底部固定区域的中文字 -->
     <div class="layui-footer">
         <!-- 底部固定区域 -->
-        © ${options.optionSiteTitle} - 后台
+        <%--© ${options.optionSiteTitle} - 后台--%>
     </div>
 </div>
 

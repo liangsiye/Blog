@@ -1,7 +1,7 @@
 package com.che.blog.util.others;
 
 /**
- * Created by 言曌 on 2017/8/26.
+ * Created by    on 2017/8/26.
  */
 	import java.io.IOException;
 	import java.io.StringWriter;

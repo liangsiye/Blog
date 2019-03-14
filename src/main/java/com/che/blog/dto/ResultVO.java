@@ -3,7 +3,7 @@ package com.che.blog.dto;
 import lombok.Data;
 
 /**
- * @author 言曌
+ * @author
  * @date 2017/11/30 下午7:04
  */
 

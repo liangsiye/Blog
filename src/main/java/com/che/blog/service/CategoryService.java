@@ -7,7 +7,7 @@ import com.che.blog.entity.Category;
 import java.util.List;
 
 /**
- * @author 言曌
+ * @author
  * @date 2017/8/24
  */
 public interface CategoryService {

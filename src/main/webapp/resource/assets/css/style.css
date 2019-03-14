@@ -554,10 +554,10 @@ a, button, input {
     position: fixed;
     background: rgba(255, 255, 255, 0.9);
 }
-/** 菜单 **/
+/** 导航栏的三个菜单 **/
 #top-menu {
     /*width: 1080px;*/
-    width: 566px;
+    width: 612px;
     /*width: 56px;*/
     display: table;
     transition-duration: .5s;
@@ -4177,12 +4177,17 @@ li.comments-anchor {
 /** 链接 **/
 .links-box {
     width: 1080px;
-    margin: 0 auto;
-    padding: 0 0 10px;
+    /*margin: 0 auto;*/
+    position: absolute;
+    margin: 9px 0px 0 380px;
+    /*padding: 0 0 10px;*/
 }
 
 #links {
     margin: 0 -2px;
+    position: relative;
+    /*right: 3000px;*/
+    /*padding: 0px 100px 10px 0;*/
 }
 
 #links h2 {
@@ -4208,6 +4213,7 @@ li.comments-anchor {
 
 .link-f a {
     background: #fff;
+    /*background: #fafbfc;*/
     text-align: center;
     padding: 5px;
     display: block;
@@ -4215,8 +4221,8 @@ li.comments-anchor {
     word-wrap: normal;
     text-overflow: ellipsis;
     overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 2px;
+    /*border: 1px solid #ddd;*/
+    /*border-radius: 2px;*/
     transition-duration: .5s;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 }
@@ -4228,9 +4234,12 @@ li.comments-anchor {
 }
 
 .link-f a:hover {
-    background: #009688;
-    color: #fff !important;
-    border: 1px solid #009688;
+    /*background: #009688;*/
+    background: #4e4e4e;
+    color: #fff !important; /*鼠标停留时，字体显示的颜色*/
+    /*color: #fafbfc !important;*//*鼠标停留时，字体显示的颜色*/
+    /*border: 1px solid #009688;*/
+    border: 1px solid #000000;
     transition: all 0.1s ease-in 0s;
 }
 
@@ -4306,22 +4315,27 @@ li.comments-anchor {
     background: #fff;
     position: relative;
     width: auto;
+    height: 180px;
     border-top: 1px solid #ddd;
     box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
     margin-top: 20px;
     min-height:50px;
 }
 
+/*页脚的©2019  Chelsea高度*/
 .site-info {
     text-align: center;
-    margin: 0 5%;
-    padding: 15px 0;
+    /*margin: 0 5%;*/
+    /*padding: 15px 0;*/
+    padding: 145px 0px 0px 0px;
 }
 
 .add-info {
     padding: 5px 0;
+    /*padding: 100px 0px 0px 0px;*/
     display: block;
 }
+
 /** 页脚小工具 **/
 #footer-widget-box {
     background: #555;

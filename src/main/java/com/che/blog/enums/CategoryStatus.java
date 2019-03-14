@@ -3,7 +3,7 @@ package com.che.blog.enums;
 import lombok.Data;
 
 /**
- * @author 言曌
+ * @author
  * @date 2018/11/17 下午4:47
  */
 

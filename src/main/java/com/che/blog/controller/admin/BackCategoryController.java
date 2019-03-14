@@ -21,7 +21,8 @@ import java.util.List;
  * @author che
  */
 @Controller
-@RequestMapping("/admin/category")
+//@RequestMapping("/admin/category")
+@RequestMapping("/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category")
 public class BackCategoryController {
 
     @Autowired
@@ -56,11 +57,12 @@ public class BackCategoryController {
     @RequestMapping(value = "/insertSubmit",method = RequestMethod.POST)
     public String insertCategorySubmit(Category category)  {
         categoryService.insertCategory(category);
-        return "redirect:/admin/category";
+//        return "redirect:/admin/category";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category"; /*后台添加分类提交后跳转的页面地址*/
     }
 
     /**
-     * 删除分类
+     * 后台的删除分类提交
      *
      * @param id
      * @return
@@ -73,7 +75,8 @@ public class BackCategoryController {
         if (count == 0) {
             categoryService.deleteCategory(id);
         }
-        return "redirect:/admin/category";
+//        return "redirect:/admin/category";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category"; /*后台的删除分类提交后跳转的页面*/
     }
 
     /**
@@ -97,7 +100,7 @@ public class BackCategoryController {
     }
 
     /**
-     * 编辑分类提交
+     * 后台的编辑分类提交
      *
      * @param category 分类
      * @return 重定向
@@ -105,6 +108,7 @@ public class BackCategoryController {
     @RequestMapping(value = "/editSubmit",method = RequestMethod.POST)
     public String editCategorySubmit(Category category)  {
         categoryService.updateCategory(category);
-        return "redirect:/admin/category";
+//        return "redirect:/admin/category";
+        return "redirect:/7QjMPLVRMtv6oFzsDLUrRdp8UrWi0Jppjs7Oszxd/category"; /*后台的编辑分类提交后跳转的页面地址*/
     }
 }
